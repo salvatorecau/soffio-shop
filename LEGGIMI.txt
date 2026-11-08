@@ -1,0 +1,9 @@
+SOFFIO SHOP - sito statico pronto per pubblicazione
+File: index.html e soffio-cover.jpg
+
+Prima della pubblicazione:
+1. Sostituire INSERIRE_EMAIL in index.html con la tua email per gli ordini.
+2. Confermare prezzo e testi.
+3. Pubblicare su hosting statico (es. GitHub Pages) e collegare il dominio via DNS.
+
+Il pulsante ORDINA apre un'email precompilata; non è un checkout. Il pagamento sarà tramite bonifico/IBAN comunicato privatamente.
