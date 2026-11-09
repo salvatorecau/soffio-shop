@@ -1,226 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>SOFFIO – Salvatore Cauteruccio</title>
-
-<meta name="description" content="SOFFIO, il nuovo album di Salvatore Cauteruccio. Dieci brani, un viaggio musicale attraverso il respiro della fisarmonica.">
+<title>SOFFIO — Salvatore Cauteruccio</title>
+<meta name="description" content="SOFFIO, il nuovo album di Salvatore Cauteruccio. Richiedi la tua copia.">
 
 <style>
 :root {
-  --bg: #07111f;
-  --panel: #101e2e;
-  --text: #f4efe7;
-  --muted: #b9c0c9;
-  --copper: #c79563;
-  --gold: #e2bd8a;
-  --line: rgba(199,149,99,.25);
+  --navy:#071824;
+  --copper:#c18a62;
+  --cream:#f4eee6;
+  --muted:#b9c4c8;
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing:border-box;
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Helvetica, Arial, sans-serif;
-  line-height: 1.7;
+  margin:0;
+  background:var(--navy);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
 }
 
-.container {
-  width: min(920px, 92%);
-  margin: auto;
-  padding: 55px 0;
+.wrap {
+  max-width:1100px;
+  margin:auto;
+  padding:28px 22px 60px;
 }
 
 header {
-  text-align: center;
-  margin-bottom: 35px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #ffffff22;
+  padding:10px 0 24px;
+  letter-spacing:.15em;
 }
 
-h1 {
-  font-size: clamp(42px, 8vw, 76px);
-  font-weight: 300;
-  letter-spacing: .18em;
-  margin: 0;
-  color: var(--gold);
+.brand {
+  font-size:14px;
+  color:var(--copper);
+  font-weight:700;
 }
 
-.artist {
-  font-size: 15px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 8px;
+.nav {
+  font-size:12px;
+  color:var(--muted);
+}
+
+.hero {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:56px;
+  align-items:center;
+  padding:56px 0;
 }
 
 .cover {
-  text-align: center;
-  margin: 35px auto;
+  width:100%;
+  max-width:500px;
+  display:block;
+  margin:auto;
+  box-shadow:0 22px 60px #0008;
 }
 
-.cover img {
-  width: min(520px, 100%);
-  height: auto;
-  display: block;
-  margin: auto;
-  border-radius: 4px;
-  box-shadow: 0 25px 70px rgba(0,0,0,.45);
+.kicker {
+  color:var(--copper);
+  letter-spacing:.22em;
+  font-size:12px;
+  text-transform:uppercase;
 }
 
-.section {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: clamp(22px, 5vw, 42px);
-  margin: 35px 0;
+h1 {
+  font-size:clamp(42px,7vw,76px);
+  font-weight:400;
+  letter-spacing:.08em;
+  margin:14px 0 8px;
 }
 
-h2 {
-  color: var(--gold);
-  font-size: 22px;
-  font-weight: 400;
-  letter-spacing: .08em;
-  margin: 0 0 25px;
+.artist {
+  font-size:16px;
+  letter-spacing:.15em;
+  color:var(--muted);
 }
 
-.description p {
-  color: var(--muted);
-  margin: 0 0 17px;
-}
-
-.tracklist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.tracklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 15px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.tracklist li:last-child {
-  border-bottom: none;
-}
-
-.number {
-  color: var(--copper);
-  min-width: 25px;
-  font-size: 14px;
-}
-
-.track {
-  flex: 1;
-  color: var(--text);
-  font-size: 15px;
-}
-
-.track small {
-  display: block;
-  color: var(--muted);
-  font-size: 12px;
-  margin-top: 3px;
-}
-
-.track em {
-  display: block;
-  font-style: normal;
-  color: var(--gold);
-  font-size: 12px;
-  margin-top: 4px;
-}
-
-.duration {
-  color: var(--muted);
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-.featured {
-  color: var(--copper);
-  font-weight: 500;
-}
-
-.credits {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.credits p {
-  margin: 0 0 12px;
-}
-
-.credits strong {
-  color: var(--gold);
-  font-weight: 500;
-}
-
-.buy-section {
-  text-align: center;
-  padding: 40px 20px;
+p {
+  line-height:1.75;
+  color:#d6dfe1;
 }
 
 .price {
-  color: var(--gold);
-  font-size: 24px;
-  margin-bottom: 22px;
+  font-size:28px;
+  color:var(--copper);
+  margin:26px 0;
 }
 
-.buy {
-  display: inline-block;
-  background: var(--copper);
-  color: #07111f;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  padding: 15px 30px;
-  border-radius: 5px;
-  transition: .25s ease;
+.btn {
+  display:inline-block;
+  background:var(--copper);
+  color:#071824;
+  padding:15px 24px;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.08em;
+  border-radius:2px;
 }
 
-.buy:hover {
-  background: var(--gold);
-  transform: translateY(-2px);
+.note {
+  font-size:12px;
+  color:var(--muted);
+  margin-top:14px;
+}
+
+section {
+  border-top:1px solid #ffffff22;
+  padding:32px 0;
+}
+
+.tagline {
+  font-size:18px;
+  letter-spacing:.02em;
+  color:var(--cream);
+}
+
+.tracklist {
+  max-width:850px;
+  margin:0 auto;
+}
+
+.tracks {
+  list-style:none;
+  padding:0;
+  margin:24px 0;
+}
+
+.tracks li {
+  display:grid;
+  grid-template-columns:42px 1fr auto;
+  gap:14px;
+  align-items:start;
+  padding:15px 0;
+  border-bottom:1px solid #ffffff18;
+}
+
+.tracknum {
+  color:var(--copper);
+  letter-spacing:.08em;
+}
+
+.feat {
+  font-style:normal;
+  color:var(--copper);
+  font-size:.82em;
+  font-weight:400;
+  letter-spacing:.01em;
+}
+
+.tracktitle {
+  font-weight:500;
+}
+
+.credit {
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+  margin-top:5px;
+}
+
+.duration {
+  color:var(--muted);
+  font-size:13px;
+  white-space:nowrap;
+}
+
+.story {
+  max-width:760px;
+  margin:0 auto;
+}
+
+.story p {
+  margin:0 0 22px;
+}
+
+.story p:last-child {
+  color:var(--copper);
+  font-style:italic;
+  margin-top:28px;
+}
+
+h2 {
+  font-weight:400;
+  letter-spacing:.1em;
+  color:var(--copper);
 }
 
 footer {
-  text-align: center;
-  color: var(--muted);
-  font-size: 12px;
-  padding: 30px 0 10px;
+  border-top:1px solid #ffffff22;
+  padding-top:24px;
+  color:var(--muted);
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-.signature {
-  color: var(--gold);
-  letter-spacing: .06em;
-  margin-top: 8px;
+@media(max-width:520px) {
+  .tracks li {
+    grid-template-columns:30px 1fr auto;
+    gap:8px;
+  }
+
+  .tracktitle {
+    font-size:14px;
+  }
+
+  .credit {
+    font-size:11px;
+  }
+
+  .duration {
+    font-size:12px;
+  }
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding: 35px 0;
+@media(max-width:760px) {
+  .hero {
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:35px 0;
   }
 
-  .tracklist li {
-    gap: 9px;
+  .cover {
+    max-width:420px;
   }
 
-  .track {
-    font-size: 14px;
-  }
-
-  .section {
-    padding: 22px 17px;
+  .details {
+    order:-1;
+    text-align:center;
   }
 }
 </style>
@@ -228,218 +250,200 @@ footer {
 
 <body>
 
-<div class="container">
+<div class="wrap">
 
 <header>
-  <h1>SOFFIO</h1>
-  <div class="artist">Salvatore Cauteruccio</div>
+  <div class="brand">SALVATORE CAUTERUCCIO</div>
+  <div class="nav">MUSICA · SOFFIO · SHOP</div>
 </header>
 
-<div class="cover">
-  <img src="soffio-cover.jpg" alt="SOFFIO – Salvatore Cauteruccio">
+<main>
+
+<div class="hero">
+
+  <div>
+    <img class="cover"
+         src="soffio-cover.jpg"
+         alt="Copertina originale dell’album SOFFIO">
+  </div>
+
+  <div class="details">
+    <div class="kicker">Il nuovo album</div>
+
+    <h1>SOFFIO</h1>
+
+    <div class="artist">SALVATORE CAUTERUCCIO</div>
+
+    <p class="tagline">
+      Un viaggio musicale attraverso il respiro della fisarmonica.
+    </p>
+
+    <div class="price">CD · €12,00</div>
+
+    <a class="btn"
+       href="mailto:salvatorecauteruccio77@gmail.com?subject=Ordine%20CD%20SOFFIO&body=Buongiorno%2C%20vorrei%20ordinare%20il%20CD%20SOFFIO.%0A%0ANome%20e%20Cognome%3A%0AIndirizzo%20di%20spedizione%3A%0ACAP%20e%20citt%C3%A0%3A%0ANumero%20di%20copie%3A%0A%0AGrazie.">
+      ORDINA IL CD
+    </a>
+
+    <div class="note">
+      L’ordine si invia via email. Riceverai le istruzioni per il pagamento e la spedizione.
+    </div>
+  </div>
+
 </div>
 
-<section class="section description">
-  <h2>Il nuovo album</h2>
+<section class="tracklist">
 
-  <p>
-    Soffio è un album dedicato all'anima della fisarmonica,
-    al suo mantice, al suo respiro, al suo movimento, al suo soffio.
-  </p>
+<h2>TRACKLIST</h2>
 
-  <p>
-    Dieci brani di world music che raccontano emozioni,
-    atmosfere e incontri, attraverso il suono di uno strumento
-    capace di trasformare l'aria in musica.
-  </p>
+<ol class="tracks">
 
-  <p>
-    Questo viaggio musicale è stato arricchito dalla presenza
-    di <span class="featured">Roberto Musolino</span>,
-    <span class="featured">Danilo Guido</span> e, con un'emozione
-    tutta speciale, di mio figlio
-    <span class="featured">Giacomo Cauteruccio</span>.
-  </p>
+<li>
+<span class="tracknum">01</span>
+<span class="tracktitle">
+The Saga of Harrison Crabfeathers / My Favorite Things
+<span class="credit">S. Kuhn – S. Swallow / R. Rodgers</span>
+</span>
+<span class="duration">3:22</span>
+</li>
 
-  <p>
-    Con Soffio ho realizzato anche un sogno nel cassetto:
-    registrare un brano al pianoforte, lasciando spazio
-    a una nuova parte di me.
-  </p>
+<li>
+<span class="tracknum">02</span>
+<span class="tracktitle">
+Domani
+<em class="feat">feat. Danilo Guido, Roberto Musolino</em>
+<span class="credit">S. Cauteruccio</span>
+</span>
+<span class="duration">3:06</span>
+</li>
 
-  <p>
-    Questo disco è un frammento del mio percorso,
-    della mia musica e della mia vita.
-  </p>
+<li>
+<span class="tracknum">03</span>
+<span class="tracktitle">
+Spleen
+<span class="credit">R. Galliano</span>
+</span>
+<span class="duration">2:31</span>
+</li>
 
-  <p>
-    Grazie a tutte le persone che vorranno ascoltarlo,
-    accoglierlo e condividere con me questo soffio.
-  </p>
+<li>
+<span class="tracknum">04</span>
+<span class="tracktitle">
+Chi tene ‘o mare
+<span class="credit">P. Daniele</span>
+</span>
+<span class="duration">2:48</span>
+</li>
 
-  <p class="signature">
-    Con tutto il mio respiro,<br>
-    Salvatore Cauteruccio
-  </p>
+<li>
+<span class="tracknum">05</span>
+<span class="tracktitle">
+Vacanze Romane
+<em class="feat">feat. Roberto Musolino</em>
+<span class="credit">C. Marrale – P. Cassano – A. Stellita</span>
+</span>
+<span class="duration">3:43</span>
+</li>
+
+<li>
+<span class="tracknum">06</span>
+<span class="tracktitle">
+Misty
+<span class="credit">E. Garner</span>
+</span>
+<span class="duration">2:50</span>
+</li>
+
+<li>
+<span class="tracknum">07</span>
+<span class="tracktitle">
+Viaggio del Cuore
+<em class="feat">feat. Giacomo Cauteruccio</em>
+<span class="credit">S. Cauteruccio</span>
+</span>
+<span class="duration">1:33</span>
+</li>
+
+<li>
+<span class="tracknum">08</span>
+<span class="tracktitle">
+El viaje
+<span class="credit">A. Piazzolla</span>
+</span>
+<span class="duration">2:47</span>
+</li>
+
+<li>
+<span class="tracknum">09</span>
+<span class="tracktitle">
+Sous le ciel de Paris
+<span class="credit">H. Giraud – J. Dréjac</span>
+</span>
+<span class="duration">1:51</span>
+</li>
+
+<li>
+<span class="tracknum">10</span>
+<span class="tracktitle">
+Domani (Solo Piano Version)
+<span class="credit">S. Cauteruccio</span>
+</span>
+<span class="duration">4:37</span>
+</li>
+
+</ol>
 </section>
 
-<section class="section">
-  <h2>Tracklist</h2>
+<section class="story">
 
-  <ol class="tracklist">
+<h2>SOFFIO</h2>
 
-    <li>
-      <span class="number">01</span>
-      <span class="track">
-        The Saga of Harrison Crabfeathers / My Favorite Things
-        <small>S. Kuhn – S. Swallow / R. Rodgers</small>
-      </span>
-      <span class="duration">3:22</span>
-    </li>
+<p>
+Soffio è un album dedicato all'anima della fisarmonica,
+al suo mantice, al suo respiro, al suo movimento, al suo soffio.
+</p>
 
-    <li>
-      <span class="number">02</span>
-      <span class="track">
-        Domani
-        <em>feat. <span class="featured">Danilo Guido</span>,
-        <span class="featured">Roberto Musolino</span></em>
-        <small>S. Cauteruccio</small>
-      </span>
-      <span class="duration">3:06</span>
-    </li>
+<p>
+Dieci brani di world music che raccontano emozioni,
+atmosfere e incontri, attraverso il suono di uno strumento
+capace di trasformare l'aria in musica.
+</p>
 
-    <li>
-      <span class="number">03</span>
-      <span class="track">
-        Spleen
-        <small>R. Galliano</small>
-      </span>
-      <span class="duration">2:31</span>
-    </li>
+<p>
+Questo viaggio musicale è stato arricchito dalla presenza
+di <span class="feat">Roberto Musolino</span>,
+<span class="feat">Danilo Guido</span> e, con un'emozione
+tutta speciale, di mio figlio
+<span class="feat">Giacomo Cauteruccio</span>.
+</p>
 
-    <li>
-      <span class="number">04</span>
-      <span class="track">
-        Chi tene ‘o mare
-        <small>P. Daniele</small>
-      </span>
-      <span class="duration">2:48</span>
-    </li>
+<p>
+Con Soffio ho realizzato anche un sogno nel cassetto:
+registrare un brano al pianoforte, lasciando spazio
+a una nuova parte di me.
+</p>
 
-    <li>
-      <span class="number">05</span>
-      <span class="track">
-        Vacanze Romane
-        <em>feat. <span class="featured">Roberto Musolino</span></em>
-        <small>C. Marrale – P. Cassano – A. Stellita</small>
-      </span>
-      <span class="duration">3:43</span>
-    </li>
+<p>
+Questo disco è un frammento del mio percorso,
+della mia musica e della mia vita.
+</p>
 
-    <li>
-      <span class="number">06</span>
-      <span class="track">
-        Misty
-        <small>E. Garner</small>
-      </span>
-      <span class="duration">2:50</span>
-    </li>
+<p>
+Grazie a tutte le persone che vorranno ascoltarlo,
+accoglierlo e condividere con me questo soffio.
+</p>
 
-    <li>
-      <span class="number">07</span>
-      <span class="track">
-        Viaggio del Cuore
-        <em>feat. <span class="featured">Giacomo Cauteruccio</span></em>
-        <small>S. Cauteruccio</small>
-      </span>
-      <span class="duration">1:33</span>
-    </li>
+<p>Con tutto il mio respiro,</p>
 
-    <li>
-      <span class="number">08</span>
-      <span class="track">
-        El viaje
-        <small>A. Piazzolla</small>
-      </span>
-      <span class="duration">2:47</span>
-    </li>
+<p>Salvatore Cauteruccio</p>
 
-    <li>
-      <span class="number">09</span>
-      <span class="track">
-        Sous le ciel de Paris
-        <small>H. Giraud – J. Dréjac</small>
-      </span>
-      <span class="duration">1:51</span>
-    </li>
-
-    <li>
-      <span class="number">10</span>
-      <span class="track">
-        Domani (Solo Piano Version)
-        <small>S. Cauteruccio</small>
-      </span>
-      <span class="duration">4:37</span>
-    </li>
-
-  </ol>
 </section>
 
-<section class="section credits">
-  <h2>Musicisti</h2>
-
-  <p>
-    <strong>Salvatore Cauteruccio</strong> —
-    Fisarmonica, melodica, pianoforte
-  </p>
-
-  <p>
-    <strong>Danilo Guido</strong> —
-    Clarinetto basso (track 02)
-  </p>
-
-  <p>
-    <strong>Roberto Musolino</strong> —
-    Contrabbasso acustico, fretless bass (track 02 e 05)
-  </p>
-
-  <p>
-    <strong>Giacomo Cauteruccio</strong> —
-    Chitarra acustica (track 07)
-  </p>
-
-  <h2 style="margin-top:30px;">Produzione</h2>
-
-  <p>
-    <strong>Registrazione:</strong>
-    CauterStudio – Scalea, Italia;
-    Zork Digital Planet – Buccino, Italia
-  </p>
-
-  <p>
-    <strong>Mixing & Mastering:</strong>
-    Alessandro Guido – Attheplace Studio, Cosenza, Italia
-  </p>
-
-  <p>
-    <strong>Produzione:</strong>
-    Roberto Musolino per NSJ
-  </p>
-</section>
-
-<section class="buy-section">
-  <div class="price">CD · €12</div>
-
-  <a class="buy"
-     href="mailto:salvatorecauteruccio77@gmail.com?subject=Ordine%20CD%20SOFFIO&body=Buongiorno%2C%20desidero%20ordinare%20il%20CD%20SOFFIO.%0A%0ANome%20e%20Cognome%3A%0AIndirizzo%20completo%3A%0ACAP%20e%20Citt%C3%A0%3A%0ANumero%20di%20copie%3A%0A%0AGrazie.">
-    ACQUISTA IL CD – €12
-  </a>
-</section>
+</main>
 
 <footer>
-  SOFFIO · Salvatore Cauteruccio
-  <div class="signature">Con tutto il mio respiro</div>
-  <div>© 2026 NSJ</div>
+  <span>© Salvatore Cauteruccio</span>
+  <span>SOFFIO · Un disco, un respiro</span>
 </footer>
 
 </div>
